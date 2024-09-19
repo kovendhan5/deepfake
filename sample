@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
 
-# Model Training
+# Model Training  
 def create_model(input_shape):
     base_model = applications.EfficientNetB3(weights='imagenet', include_top=False, input_shape=input_shape)
     x = layers.GlobalAveragePooling2D()(base_model.output)
